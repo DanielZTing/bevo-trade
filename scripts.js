@@ -1,10 +1,10 @@
 fetch('http://localhost:3000/list').then(response => response.json()).then(requests => {
     for (request of requests) {
         let row = document.getElementById('table').insertRow();
-        row.insertCell().appendChild(document.createTextNode(request.time));
+        row.insertCell().appendChild(document.createTextNode(request.time.replace('T', ' at ')));
         row.insertCell().appendChild(document.createTextNode(request.place));
         row.insertCell().appendChild(document.createTextNode(request.description));
-        row.insertCell().appendChild(document.createTextNode(request.bid));
+        row.insertCell().appendChild(document.createTextNode('$' + Number(request.bid).toFixed(2)));
         let input = document.createElement('input');
         input.type = 'number';
         input.min = 0;
