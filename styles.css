@@ -1,0 +1,17 @@
+main {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.bid {
+    width: 8em;
+}
